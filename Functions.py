@@ -14,3 +14,12 @@ def Qsort(mass):
             else:
                 EqualPillar.append(el)
         return Qsort(SmallerThanPillar) + EqualPillar + Qsort(BiggerThanPillar)
+
+def combsort(l):
+    ll = len(l)
+    for i in range(ll-1):
+        for j in range(i+1):
+            f,s=l[j], l[-1*(i + 1)+j]
+            if f > s:
+                l[j], l[-1*(i + 1)+j] = s, f
+    return l

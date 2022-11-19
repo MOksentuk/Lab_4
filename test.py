@@ -1,5 +1,4 @@
-import timeit as t
+import Functions
 
-qsort = 'for i in range(1000000): pass'
-print(qsort)
-print(t.timeit(stmt=qsort, number=1))
+d = [12, 5, 6, 23, 75, 8, 34, 6, 2, 1]
+print(Functions.combsort(d))
